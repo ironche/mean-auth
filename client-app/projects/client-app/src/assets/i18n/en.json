@@ -1,0 +1,38 @@
+{
+  "APP": {
+    "TITLE": "JWT demo"
+  },
+  "FORM": {
+    "USERNAME": "Enter your username",
+    "PASSWORD": "Enter your password"
+  },
+  "BUTTON": {
+    "CONTINUE": "Continue"
+  },
+  "ERROR": {
+    "REQUIRED": "This field is required",
+    "EMAIL": "Enter valid email",
+    "PATTERN": "Enter valid pattern",
+    "UNKNOWN": "Something went wrong, please try again"
+  },
+  "PAGE": {
+    "AUTH": {
+      "LOGIN": {
+        "TITLE": "Login",
+        "SUBTITLE": "Login with your existing credentials"
+      },
+      "REGISTER": {
+        "TITLE": "Register",
+        "SUBTITLE": "Choose credentials to create new account"
+      },
+      "LOGOUT": {
+        "TITLE": "Logout"
+      }
+    },
+    "USER": {
+      "WELCOME": {
+        "GREETING": "Welcome, {{ username }}"
+      }
+    }
+  }
+}

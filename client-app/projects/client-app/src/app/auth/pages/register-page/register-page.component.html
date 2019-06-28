@@ -1,0 +1,35 @@
+<form class="register-page" [formGroup]="form">
+  <mat-card>
+    <mat-card-header>
+      <section mat-card-avatar>
+        <mat-icon class="register-page__avatar">account_circle</mat-icon>
+      </section>
+      <mat-card-title>{{ 'PAGE.AUTH.REGISTER.TITLE' | translate }}</mat-card-title>
+      <mat-card-subtitle>{{ 'PAGE.AUTH.REGISTER.SUBTITLE' | translate }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        <mat-form-field>
+          <mat-label>{{ 'FORM.USERNAME' | translate }}</mat-label>
+          <input matInput tabindex="1" type="email" formControlName="username">
+          <mat-error *ngIf="form.get('username').invalid">{{ getError(form.get('username')) | translate }}</mat-error>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <mat-label>{{ 'FORM.PASSWORD' | translate }}</mat-label>
+          <input matInput tabindex="2" [type]="hidePassword ? 'password' : 'text'" formControlName="password">
+          <button mat-icon-button matSuffix (click)="togglePasswordVisibility()">
+            <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+          </button>
+          <mat-error *ngIf="form.get('password').invalid">{{ getError(form.get('password')) | translate }}</mat-error>
+        </mat-form-field>
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" tabindex="3" type="submit" [disabled]="!form.valid" (click)="onSubmit()">
+        {{ 'BUTTON.CONTINUE' | translate | uppercase }}
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</form>

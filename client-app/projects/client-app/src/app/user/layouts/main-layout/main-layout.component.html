@@ -1,0 +1,15 @@
+<div class="main-layout">
+  <mat-toolbar color="primary">
+    <span>{{ 'APP.TITLE' | translate }}</span>
+    <span class="main-layout__fill-space"></span>
+    <nav>
+      <button mat-button (click)="logout()">
+        {{ 'PAGE.AUTH.LOGOUT.TITLE' | translate }}
+        <mat-icon>close</mat-icon>
+      </button>
+    </nav>
+  </mat-toolbar>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>

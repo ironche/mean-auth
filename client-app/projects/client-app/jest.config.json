@@ -1,0 +1,29 @@
+{
+  "bail": 1,
+  "collectCoverageFrom": [
+    "src/app/**/*.ts",
+    "!**/*.(module|enum|model).ts"
+  ],
+  "coverageDirectory": "../../coverage/",
+  "coverageThreshold": {
+    "global": {
+      "lines": 90,
+      "branches": 90,
+      "functions": 90,
+      "statements": 90
+    }
+  },
+  "displayName": "client-app",
+  "globals": {
+    "ts-jest": {
+      "tsConfig": "<rootDir>/tsconfig.spec.json",
+      "stringifyContentPathRegex": "\\.html$",
+      "astTransformers": ["jest-preset-angular/InlineHtmlStripStylesTransformer"]
+    }
+  },
+  "preset": "jest-preset-angular",
+  "setupFilesAfterEnv": ["<rootDir>/src/test.ts"],
+  "testMatch": [
+    "**/*.spec.ts"
+  ]
+}
